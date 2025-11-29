@@ -139,6 +139,7 @@ CUDA_VISIBLE_DEVICES=0 python MedQA-ChatGLM/finetune.py \
 # checkpoints下载
 
 ./checkpoints/output_dir/train_lora_multi_gpu_merged-cMedQA/checkpoint-53000
+
 checkpoint-53000：
 链接: https://pan.baidu.com/s/1uJgIqs45-teevlctPnaHmA?pwd=fm77 提取码: fm77
 
