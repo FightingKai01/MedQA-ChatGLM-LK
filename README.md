@@ -41,9 +41,7 @@ MedQA-ChatGLM-LK
 
 测试使用数据集：Huatuo
 
-## 方式1：CLI
-
-### ChatGLM-6B 模型的命令示例：
+## ChatGLM-6B 模型的命令示例：
 
 ```
 ChatGLM-6B 模型微调CLI：
@@ -126,7 +124,7 @@ CUDA_VISIBLE_DEVICES=0 python MedQA-ChatGLM/finetune.py \
 
 ## Qwen3-1.7B 微调项目
 
-跳转：
+跳转：https://github.com/InceptionStep/-Qwen3-1.7B-.git
 结果展示：
 ![result_qwen3-1.7b](./images/result_qwen3-1.7b.png)
 
@@ -140,7 +138,8 @@ CUDA_VISIBLE_DEVICES=0 python MedQA-ChatGLM/finetune.py \
 # checkpoints下载
 
 ./checkpoints/output_dir/train_lora_multi_gpu_merged-cMedQA/checkpoint-53000
-
+checkpoint-53000：
+链接: https://pan.baidu.com/s/1uJgIqs45-teevlctPnaHmA?pwd=fm77 提取码: fm77
 
 
 
