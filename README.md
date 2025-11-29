@@ -15,6 +15,10 @@ MedQA-ChatGLM-LK
 |   |-- ...
 |   |-- ...
 |   |-- ...
+|-- images#结果展示
+|   |-- ...
+|   |-- ...
+|   |-- ...
 |-- data#数据集的json文件
 |   |-- ...
 |   |-- ...
@@ -42,7 +46,7 @@ MedQA-ChatGLM-LK
 ### ChatGLM-6B 模型的命令示例：
 
 ```
-ChatGLM-6B 模型的命令示例：
+ChatGLM-6B 模型微调CLI：
 单卡微调：
 CUDA_VISIBLE_DEVICES=0 python MedQA-ChatGLM/finetune.py \
 --do_train \
@@ -64,6 +68,7 @@ CUDA_VISIBLE_DEVICES=0 python MedQA-ChatGLM/finetune.py \
 train_lora_single_gpu_merged-cMedQA \
 2>&1 | tee train_lora_single_gpu_merged-cMedQA.log
 
+
 多卡微调：
 # 配置分布式参数
 accelerate config
@@ -84,6 +89,9 @@ accelerate launch ./MedQA-ChatGLM/finetune.py \
 --output_dir ./checkpoints/output_dir/\
 train_lora_multi_gpu_merged-cMedQA \
 2>&1 | tee train_lora_multi_gpu_merged-cMedQA.log
+
+
+
 评估：
 # 加载lora
 CUDA_VISIBLE_DEVICES=5 python MedQA-ChatGLM/finetune.py \
@@ -99,6 +107,8 @@ train_lora_multi_gpu_merged-cMedQA/checkpoint-53000 \
 --predict_with_generate True \
 --fp16 \
 2>&1 | tee eval_my_lora_single_gpu_Huatuo.log
+
+
 # 不加载lora
 CUDA_VISIBLE_DEVICES=0 python MedQA-ChatGLM/finetune.py \
 --do_eval \
@@ -114,45 +124,22 @@ CUDA_VISIBLE_DEVICES=0 python MedQA-ChatGLM/finetune.py \
 ```
 
 
-
-## 方式2：脚本
-
-### 训练
-
-```
-python train.py \
-  --dataset_name "iwslt2017" \
-  --dataset_config "iwslt2017-en-de" \
-  --src_lang "en" \
-  --tgt_lang "de" \
-  --model_name "Helsinki-NLP/opus-mt-en-de" \
-  --max_len 1024 \
-  --batch_size 64 \
-  --limit_train_samples 0 \
-  --num_layers 2 \
-  --d_model 256 \
-  --num_heads 8 \
-  --d_ffn 1024 \
-  --dropout_emb 0.1 \
-  --dropout_atten 0.1 \
-  --dropout_ffn 0.1 \
-  --num_epochs 50 \
-  --learning_rate 5e-4 \
-  --weight_decay 0.01 \
-  --save_dir "./checkpoints" \
-  --result_dir "../results"  \
-  --resume "./checkpoints/checkpoint.pt"
-```
-
 ## Qwen3-1.7B 微调项目
 
 跳转：
+结果展示：
+![result_qwen3-1.7b](./images/result_qwen3-1.7b.png)
+
 
 # 结果展示
 
 **在 Huatuo 测试集上的评估结果如下：**
 
-![Snipaste_2025-11-29_19-26-50](./readme.assets/Snipaste_2025-11-29_19-26-50.png)
+![result_medqa-chatglm-6b](./images/result_medqa-chatglm-6b.png)
+
+# checkpoints下载
+
+./checkpoints/output_dir/train_lora_multi_gpu_merged-cMedQA/checkpoint-53000
 
 
 
