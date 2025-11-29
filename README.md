@@ -125,6 +125,7 @@ CUDA_VISIBLE_DEVICES=0 python MedQA-ChatGLM/finetune.py \
 ## Qwen3-1.7B 微调项目
 
 跳转：https://github.com/InceptionStep/-Qwen3-1.7B-.git
+
 结果展示：
 ![result_qwen3-1.7b](./images/result_qwen3-1.7b.png)
 
