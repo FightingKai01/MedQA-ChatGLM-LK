@@ -1,6 +1,6 @@
 # MedQA-ChatGLM-LK
 
-本项目重在学习和理解大模型微调技术，借鉴已有微调ChatGLM项目（https://github.com/WangRongsheng/MedQA-ChatGLM  对其提供的数据集、代码逻辑以及相关运行方式进行完善和修改），对ChatGLM模型进行医学Lora微调，重在学习、理解和实践，同时同组成员使用全参数微调和Lora微调技术对Qwen3-1.7B进行医学微调，微调效果更加明显，对于学习和理解更有帮助，是本项目的优化版本，也可进行参考和学习。
+本项目重在学习和理解大模型微调技术，借鉴已有微调ChatGLM项目（https://github.com/WangRongsheng/MedQA-ChatGLM  对其提供的数据集、代码逻辑以及相关运行方式进行完善和修改），对ChatGLM-6B模型进行医学Lora微调，重在学习、理解和实践，同时同组成员使用全参数微调和Lora微调技术对Qwen3-1.7B进行医学微调，微调效果更加明显，对于学习和理解更有帮助，是本项目的优化版本，也可进行参考和学习。
 
 # 安装
 ```
